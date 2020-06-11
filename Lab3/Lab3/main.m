@@ -16,26 +16,22 @@ void score(void);
 NSString * getUserInput(int maxLenght,NSString *prompt);
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        QuestionManager *questions = [QuestionManager init];
+        QuestionManager *questions = [[QuestionManager alloc] init];
         NSString *input = @"";
         while (![input.lowercaseString isEqualToString:@"quite\n"]) {
-            AdditionQuestion *question= [[AdditionQuestion alloc] initQuestion];
-            question.getQuestion;
-            question.getInfo;
+            AdditionQuestion *newQuestion= [[AdditionQuestion alloc] init];
+            printf("%s", [[newQuestion getQuestion] UTF8String]);
             input = getUserInput(255, @"Enter your answer:\n");
-            question.setEndTime;
-            [_timers addObject: @(question.differenceTime)];
-            //User input
-            //printf("input %s", [input UTF8String]);
-            if([question checkAnswer:input]){
+            [newQuestion setEndTime];
+            [questions addQuestion:newQuestion];
+            if([newQuestion checkAnswer:input]){
                 printf("Right!\n");
                 right++;
             }else if(![input.lowercaseString isEqualToString:@"quite\n"]){
                 printf("Wrong!\n");
                 wrong++;
             }
-            //printf("Your time was: %i the average time is: %i\n",question.getTimer, getAverageTime(_timers));
-            
+            printf("%s\n", [[questions timeOutput] UTF8String]);
             score();
         }
         
@@ -56,13 +52,6 @@ NSString * getUserInput(int maxLenght,NSString *prompt){
         return [[NSString stringWithUTF8String:inputChars] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     }
     return NULL;
-}
-int getAverageTime(NSMutableArray *_timers){
-    int sum = 0;
-    for(NSString * time in _timers){
-        sum += [time intValue];
-    }
-    return sum/[_timers count];
 }
 void score(void){
     printf("Your final score is:\nRight:%i Wrong:%i ---%i\n", right,wrong,(right*100)/(right+wrong));

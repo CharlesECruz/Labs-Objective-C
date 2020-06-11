@@ -7,7 +7,7 @@
 //
 
 #import "QuestionManager.h"
-
+#import "AdditionQuestion.h"
 @implementation QuestionManager{
     NSMutableArray *questions;
 }
@@ -17,5 +17,15 @@
         questions = [NSMutableArray array];
     }
     return self;
+}
+-(void) addQuestion:(AdditionQuestion *) question{
+    [questions addObject:question];
+}
+-(NSString *) timeOutput{
+    int sum = 0;
+    for (AdditionQuestion *question in questions) {
+        sum += [question answerTime];
+    }
+    return [NSString stringWithFormat:@"total time: %is, average time:%lus\n",sum,sum/[questions count]];
 }
 @end

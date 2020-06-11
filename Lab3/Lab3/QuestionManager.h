@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "AdditionQuestion.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface QuestionManager : NSObject
-
+-(id)init;
+-(void) addQuestion:(AdditionQuestion *) question;
+-(NSString *) timeOutput;
 @end
 
 NS_ASSUME_NONNULL_END

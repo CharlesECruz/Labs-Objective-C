@@ -13,10 +13,9 @@
     NSString *_Answer;
     NSDate *_startTime;
     NSDate *_endTime;
-    
 }
 ///MARK: Constructor
--(instancetype) initQuestion: (QuestionManager *) questions{
+-(id) init{
     self = [super init];
     if (self){
         int num1 = arc4random_uniform(90)+10;
@@ -25,8 +24,6 @@
         _Answer = [@(num1 + num2) stringValue];
         _startTime=[NSDate date];
     }
-    self.
-    [questions addObject: @(self)];
     return self;
 }
 ///MARK: Functions
@@ -59,7 +56,7 @@
     NSInteger time = [_endTime timeIntervalSinceDate:_startTime];
     return (int)time;
 }
--(int)differenceTime{
+-(int) answerTime{
     return [_endTime timeIntervalSinceDate:_startTime];
 }
 @end

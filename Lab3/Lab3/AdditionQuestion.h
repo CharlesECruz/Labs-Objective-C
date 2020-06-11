@@ -7,11 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AdditionQuestion : NSObject
--(instancetype) initQuestion: (QuestionManager *) questions;
+-(id) init;
 -(NSString *)creatQuestion:(int)num1  andNum2: (int) num2;
 -(void) getInfo;
 -(NSString *) getQuestion;
@@ -19,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(NSString *) getAnswer;
 -(void) setEndTime;
 -(int) getTimer;
--(int)differenceTime;
+-(int)answerTime;
 @end
 
 NS_ASSUME_NONNULL_END
