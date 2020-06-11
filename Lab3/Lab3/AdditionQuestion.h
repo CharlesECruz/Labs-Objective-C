@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AdditionQuestion : NSObject
--(instancetype) initQuestion;
+-(instancetype) initQuestion: (QuestionManager *) questions;
 -(NSString *)creatQuestion:(int)num1  andNum2: (int) num2;
 -(void) getInfo;
 -(NSString *) getQuestion;

@@ -7,7 +7,7 @@
 //
 
 #import "AdditionQuestion.h"
-
+#import "QuestionManager.h"
 @implementation AdditionQuestion{
     NSString *_Question;
     NSString *_Answer;
@@ -16,7 +16,7 @@
     
 }
 ///MARK: Constructor
--(instancetype) initQuestion{
+-(instancetype) initQuestion: (QuestionManager *) questions{
     self = [super init];
     if (self){
         int num1 = arc4random_uniform(90)+10;
@@ -24,8 +24,9 @@
         _Question = [self creatQuestion:num1 andNum2:num2];
         _Answer = [@(num1 + num2) stringValue];
         _startTime=[NSDate date];
-        
     }
+    self.
+    [questions addObject: @(self)];
     return self;
 }
 ///MARK: Functions

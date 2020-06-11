@@ -8,15 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "AdditionQuestion.h"
+#import "QuestionManager.h"
+
 extern int right = 0;
 extern int wrong = 0;
 void score(void);
 NSString * getUserInput(int maxLenght,NSString *prompt);
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSMutableArray *_timers = [NSMutableArray array];
-        printf("Start program");
-        
+        QuestionManager *questions = [QuestionManager init];
         NSString *input = @"";
         while (![input.lowercaseString isEqualToString:@"quite\n"]) {
             AdditionQuestion *question= [[AdditionQuestion alloc] initQuestion];
@@ -34,7 +34,7 @@ int main(int argc, const char * argv[]) {
                 printf("Wrong!\n");
                 wrong++;
             }
-            printf("Your time was: %i the average time is: %i\n",question.getTimer, getAverageTime(_timers));
+            //printf("Your time was: %i the average time is: %i\n",question.getTimer, getAverageTime(_timers));
             
             score();
         }
