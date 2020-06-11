@@ -11,6 +11,9 @@
 @implementation AdditionQuestion{
     NSString *_Question;
     NSString *_Answer;
+    NSDate *_startTime;
+    NSDate *_endTime;
+    
 }
 ///MARK: Constructor
 -(instancetype) initQuestion{
@@ -20,6 +23,8 @@
         int num2 = arc4random_uniform(90)+10;
         _Question = [self creatQuestion:num1 andNum2:num2];
         _Answer = [@(num1 + num2) stringValue];
+        _startTime=[NSDate date];
+        
     }
     return self;
 }
@@ -30,11 +35,11 @@
 -(void) getInfo{
     printf("Question: %s\nAnswer: %s\n",[_Question UTF8String],[_Answer UTF8String]);
 }
--(void) getQuestion{
-    printf("%s",[_Question UTF8String]);
+-(NSString *) getQuestion{
+    return _Question;
 }
--(void) getAnswer{
-    printf("%s",[_Answer UTF8String]);
+-(NSString *) getAnswer{
+    return _Answer;
 }
 
 -(Boolean) checkAnswer:(NSString *) userAnswer{
@@ -43,5 +48,17 @@
     }else{
         return false;
     }
+}
+-(void) setEndTime{
+    _endTime=[NSDate date];
+    NSInteger timeAdd = [_endTime timeIntervalSinceDate:_startTime];
+}
+-(int) getTimer{
+    /*NSString *textReturn = [NSString stringWithFormat:@"Total time: %f Average time: %i\n",[_endTime timeIntervalSinceDate:_startTime],[self getAverageTime]];*/
+    NSInteger time = [_endTime timeIntervalSinceDate:_startTime];
+    return (int)time;
+}
+-(int)differenceTime{
+    return [_endTime timeIntervalSinceDate:_startTime];
 }
 @end

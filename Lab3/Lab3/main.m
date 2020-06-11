@@ -8,16 +8,23 @@
 
 #import <Foundation/Foundation.h>
 #import "AdditionQuestion.h"
+extern int right = 0;
+extern int wrong = 0;
+void score(void);
 NSString * getUserInput(int maxLenght,NSString *prompt);
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        int right = 0;
-        int wrong = 0;
+        NSMutableArray *_timers = [NSMutableArray array];
+        printf("Start program");
+        
         NSString *input = @"";
         while (![input.lowercaseString isEqualToString:@"quite\n"]) {
             AdditionQuestion *question= [[AdditionQuestion alloc] initQuestion];
             question.getQuestion;
+            question.getInfo;
             input = getUserInput(255, @"Enter your answer:\n");
+            question.setEndTime;
+            [_timers addObject: @(question.differenceTime)];
             //User input
             //printf("input %s", [input UTF8String]);
             if([question checkAnswer:input]){
@@ -27,8 +34,11 @@ int main(int argc, const char * argv[]) {
                 printf("Wrong!\n");
                 wrong++;
             }
+            printf("Your time was: %i the average time is: %i\n",question.getTimer, getAverageTime(_timers));
+            
+            score();
         }
-        printf("Your final score is:\nRight:%i\nWrong:%i\n", right,wrong);
+        
     }
     return 0;
 }
@@ -46,4 +56,15 @@ NSString * getUserInput(int maxLenght,NSString *prompt){
         return [[NSString stringWithUTF8String:inputChars] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     }
     return NULL;
+}
+int getAverageTime(NSMutableArray *_timers){
+    int sum = 0;
+    for(NSString * time in _timers){
+        sum += [time intValue];
+    }
+    return sum/[_timers count];
+}
+void score(void){
+    printf("Your final score is:\nRight:%i Wrong:%i ---%i\n", right,wrong,(right*100)/(right+wrong));
+    
 }

@@ -14,9 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 -(instancetype) initQuestion;
 -(NSString *)creatQuestion:(int)num1  andNum2: (int) num2;
 -(void) getInfo;
--(void) getQuestion;
+-(NSString *) getQuestion;
 -(Boolean) checkAnswer:(NSString *) userAnswer;
--(void) getAnswer;
+-(NSString *) getAnswer;
+-(void) setEndTime;
+-(int) getTimer;
+-(int)differenceTime;
 @end
 
 NS_ASSUME_NONNULL_END
