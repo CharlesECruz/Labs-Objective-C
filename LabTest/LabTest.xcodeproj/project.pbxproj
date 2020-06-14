@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8453D9F924959DD700F801BA /* StripePaymentService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453D9F824959DD700F801BA /* StripePaymentService.m */; };
-		847D0EE424958D4C00C747D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 847D0EE324958D4C00C747D6 /* main.m */; };
-		847D0EEC249591D100C747D6 /* PaymentGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 847D0EEB249591D100C747D6 /* PaymentGateway.m */; };
+		84572B6C2495F24100A5F151 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84572B6B2495F24100A5F151 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		847D0EDE24958D4C00C747D6 /* CopyFiles */ = {
+		84572B662495F24100A5F151 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,16 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8453D9F724959DD700F801BA /* StripePaymentService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StripePaymentService.h; sourceTree = "<group>"; };
-		8453D9F824959DD700F801BA /* StripePaymentService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StripePaymentService.m; sourceTree = "<group>"; };
-		847D0EE024958D4C00C747D6 /* Lab10 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lab10; sourceTree = BUILT_PRODUCTS_DIR; };
-		847D0EE324958D4C00C747D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		847D0EEA249591D100C747D6 /* PaymentGateway.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentGateway.h; sourceTree = "<group>"; };
-		847D0EEB249591D100C747D6 /* PaymentGateway.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentGateway.m; sourceTree = "<group>"; };
+		84572B682495F24100A5F151 /* LabTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LabTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84572B6B2495F24100A5F151 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		847D0EDD24958D4C00C747D6 /* Frameworks */ = {
+		84572B652495F24100A5F151 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,69 +38,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		847D0ED724958D4C00C747D6 = {
+		84572B5F2495F24100A5F151 = {
 			isa = PBXGroup;
 			children = (
-				847D0EE224958D4C00C747D6 /* Lab10 */,
-				847D0EE124958D4C00C747D6 /* Products */,
+				84572B6A2495F24100A5F151 /* LabTest */,
+				84572B692495F24100A5F151 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		847D0EE124958D4C00C747D6 /* Products */ = {
+		84572B692495F24100A5F151 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				847D0EE024958D4C00C747D6 /* Lab10 */,
+				84572B682495F24100A5F151 /* LabTest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		847D0EE224958D4C00C747D6 /* Lab10 */ = {
+		84572B6A2495F24100A5F151 /* LabTest */ = {
 			isa = PBXGroup;
 			children = (
-				847D0EE324958D4C00C747D6 /* main.m */,
-				8453D9F724959DD700F801BA /* StripePaymentService.h */,
-				8453D9F824959DD700F801BA /* StripePaymentService.m */,
-				847D0EEA249591D100C747D6 /* PaymentGateway.h */,
-				847D0EEB249591D100C747D6 /* PaymentGateway.m */,
+				84572B6B2495F24100A5F151 /* main.m */,
 			);
-			path = Lab10;
+			path = LabTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		847D0EDF24958D4C00C747D6 /* Lab10 */ = {
+		84572B672495F24100A5F151 /* LabTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 847D0EE724958D4C00C747D6 /* Build configuration list for PBXNativeTarget "Lab10" */;
+			buildConfigurationList = 84572B6F2495F24100A5F151 /* Build configuration list for PBXNativeTarget "LabTest" */;
 			buildPhases = (
-				847D0EDC24958D4C00C747D6 /* Sources */,
-				847D0EDD24958D4C00C747D6 /* Frameworks */,
-				847D0EDE24958D4C00C747D6 /* CopyFiles */,
+				84572B642495F24100A5F151 /* Sources */,
+				84572B652495F24100A5F151 /* Frameworks */,
+				84572B662495F24100A5F151 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Lab10;
-			productName = Lab10;
-			productReference = 847D0EE024958D4C00C747D6 /* Lab10 */;
+			name = LabTest;
+			productName = LabTest;
+			productReference = 84572B682495F24100A5F151 /* LabTest */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		847D0ED824958D4C00C747D6 /* Project object */ = {
+		84572B602495F24100A5F151 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = Carlos;
 				TargetAttributes = {
-					847D0EDF24958D4C00C747D6 = {
+					84572B672495F24100A5F151 = {
 						CreatedOnToolsVersion = 11.0;
 					};
 				};
 			};
-			buildConfigurationList = 847D0EDB24958D4C00C747D6 /* Build configuration list for PBXProject "Lab10" */;
+			buildConfigurationList = 84572B632495F24100A5F151 /* Build configuration list for PBXProject "LabTest" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,35 +104,32 @@
 				en,
 				Base,
 			);
-			mainGroup = 847D0ED724958D4C00C747D6;
-			productRefGroup = 847D0EE124958D4C00C747D6 /* Products */;
+			mainGroup = 84572B5F2495F24100A5F151;
+			productRefGroup = 84572B692495F24100A5F151 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				847D0EDF24958D4C00C747D6 /* Lab10 */,
+				84572B672495F24100A5F151 /* LabTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		847D0EDC24958D4C00C747D6 /* Sources */ = {
+		84572B642495F24100A5F151 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8453D9F924959DD700F801BA /* StripePaymentService.m in Sources */,
-				847D0EE424958D4C00C747D6 /* main.m in Sources */,
-				847D0EEC249591D100C747D6 /* PaymentGateway.m in Sources */,
+				84572B6C2495F24100A5F151 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		847D0EE524958D4C00C747D6 /* Debug */ = {
+		84572B6D2495F24100A5F151 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -150,7 +137,6 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_MODULES_DISABLE_PRIVATE_WARNING = NO;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -198,11 +184,10 @@
 			};
 			name = Debug;
 		};
-		847D0EE624958D4C00C747D6 /* Release */ = {
+		84572B6E2495F24100A5F151 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -210,7 +195,6 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_MODULES_DISABLE_PRIVATE_WARNING = NO;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -251,10 +235,9 @@
 			};
 			name = Release;
 		};
-		847D0EE824958D4C00C747D6 /* Debug */ = {
+		84572B702495F24100A5F151 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SFV2W24F4R;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -262,10 +245,9 @@
 			};
 			name = Debug;
 		};
-		847D0EE924958D4C00C747D6 /* Release */ = {
+		84572B712495F24100A5F151 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SFV2W24F4R;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -276,25 +258,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		847D0EDB24958D4C00C747D6 /* Build configuration list for PBXProject "Lab10" */ = {
+		84572B632495F24100A5F151 /* Build configuration list for PBXProject "LabTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				847D0EE524958D4C00C747D6 /* Debug */,
-				847D0EE624958D4C00C747D6 /* Release */,
+				84572B6D2495F24100A5F151 /* Debug */,
+				84572B6E2495F24100A5F151 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		847D0EE724958D4C00C747D6 /* Build configuration list for PBXNativeTarget "Lab10" */ = {
+		84572B6F2495F24100A5F151 /* Build configuration list for PBXNativeTarget "LabTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				847D0EE824958D4C00C747D6 /* Debug */,
-				847D0EE924958D4C00C747D6 /* Release */,
+				84572B702495F24100A5F151 /* Debug */,
+				84572B712495F24100A5F151 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 847D0ED824958D4C00C747D6 /* Project object */;
+	rootObject = 84572B602495F24100A5F151 /* Project object */;
 }
