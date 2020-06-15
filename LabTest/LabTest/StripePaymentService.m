@@ -10,4 +10,13 @@
 
 @implementation StripePaymentService
 
+- (void)processPaymentAmount:(nonnull NSInteger *) payment {
+    printf("STRIPE processed amount: $ %i \n",(int)payment);
+}
+
+- (Boolean)canProcessPayment {
+    return arc4random_uniform(2)==1?true:false;
+}
+
+
 @end

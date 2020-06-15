@@ -7,7 +7,19 @@
 //
 
 #import "PaymentGateway.h"
-
+@interface PaymentGateway()
+@end
 @implementation PaymentGateway
-
+-(void) processPaymentAmount:(NSInteger *) payment{
+    if ([self canProcessPayment]) {
+        printf("Processing.\n");
+        [self.paymentDelegate processPaymentAmount:payment];
+    }else{
+        printf("At this moment it's imposible process your payment.\n");
+    }
+    
+}
+-(Boolean) canProcessPayment{
+    return [self.paymentDelegate canProcessPayment];
+}
 @end

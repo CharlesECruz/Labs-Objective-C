@@ -1,6 +1,6 @@
 //
 //  StripePaymentService.m
-//  Lab10
+//  LabTest
 //
 //  Created by happy on 2020-06-13.
 //  Copyright © 2020 Carlos. All rights reserved.
@@ -10,8 +10,13 @@
 
 @implementation StripePaymentService
 
-- (void)processPaymentAmount:(NSInteger *)payment {
-    printf("Stripe");
+- (void)processPaymentAmount:(nonnull NSInteger *) payment {
+    printf("STRIPE processed amount: $ %i \n",(int)payment);
 }
+
+- (Boolean)canProcessPayment {
+    return arc4random_uniform(2)==1?true:false;
+}
+
 
 @end

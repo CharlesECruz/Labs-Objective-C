@@ -10,8 +10,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PaymentGateway : NSObject
+@class PaymentGateway;
+@protocol PaymentDelegate <NSObject>
+
+-(void) processPaymentAmount:(NSInteger *) payment;
+-(Boolean) canProcessPayment;
 
 @end
 
+
+
+@interface PaymentGateway : NSObject
+@property (nonatomic,weak)id<PaymentDelegate> paymentDelegate;
+-(void) processPaymentAmount:(NSInteger *) payment;
+-(Boolean) canProcessPayment;
+@end
 NS_ASSUME_NONNULL_END
