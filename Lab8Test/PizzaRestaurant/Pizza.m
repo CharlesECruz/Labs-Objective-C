@@ -45,17 +45,10 @@
 
 - (NSString*) enumSizeToString:(PizzaSize) size {
     switch(size) {
-        case small:
-            return @"small";
-            break;
-        case medium:
-            return @"medium";
-            break;
-        case large:
-            return @"large";
-            break;
-        default:
-            return @"wrong size";
+        case small:  return @"small";  break;
+        case medium: return @"medium"; break;
+        case large:  return @"large";  break;
+        default:     return @"wrong size";
     }
 }
 @end

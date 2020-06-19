@@ -11,7 +11,15 @@
 @implementation Kitchen
 
 - (Pizza *)makePizzaWithSize:(PizzaSize)size toppings:(NSArray *)toppings{
-    Pizza *myPizza = [[[Pizza alloc] init] init:size andToppings:toppings] ;
+    Pizza *myPizza;
+    NSlog(@"topping: %@",[toppings objectAtIndex: 0]);
+    if([[toppings objectAtIndex: 0]isEqualToString: @"peperonni"]){
+        myPizza = [[[Pizza alloc] init] init:size andToppings:@[@"peperonni"]];
+    }else if ([[toppings objectAtIndex: 0]isEqualToString:@"meatlovers"]){
+        myPizza = [[[Pizza alloc] init] init:size andToppings:@[@"cheese", @"bacon", @"ham", @"pepperoni"]];
+    }else{
+        myPizza = [[[Pizza alloc] init] init:size andToppings:toppings];
+    }
     return myPizza;
 }
 -(PizzaSize)getPizzaSize:(NSString *) size{
